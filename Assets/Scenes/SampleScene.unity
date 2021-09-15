@@ -780,7 +780,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.55, y: 4.37, z: -20}
+  m_LocalPosition: {x: 15.13, y: 4.37, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1243,7 +1243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409863351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.55, y: 4.37, z: -20}
+  m_LocalPosition: {x: 15.13, y: 4.37, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1879989985}
@@ -1604,6 +1604,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 563490530503443860, guid: 7bf7eb0cd0c9c4f4399142c8d780d23d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 563490530503443860, guid: 7bf7eb0cd0c9c4f4399142c8d780d23d,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 1660425008838206100, guid: 7bf7eb0cd0c9c4f4399142c8d780d23d,
         type: 3}
       propertyPath: m_RootOrder
@@ -1612,7 +1622,7 @@ PrefabInstance:
     - target: {fileID: 1660425008838206100, guid: 7bf7eb0cd0c9c4f4399142c8d780d23d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 5.58
       objectReference: {fileID: 0}
     - target: {fileID: 1660425008838206100, guid: 7bf7eb0cd0c9c4f4399142c8d780d23d,
         type: 3}
@@ -1739,6 +1749,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3873332690569419059, guid: f6ed913fbd36ed048899aafb4dce6aba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057812507182032311, guid: f6ed913fbd36ed048899aafb4dce6aba,
         type: 3}
       propertyPath: m_IsActive
       value: 0
