@@ -1614,6 +1614,26 @@ PrefabInstance:
       propertyPath: m_Parameters.widthMultiplier
       value: 0.35
       objectReference: {fileID: 0}
+    - target: {fileID: 1660425008807863680, guid: 7bf7eb0cd0c9c4f4399142c8d780d23d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660425008807863680, guid: 7bf7eb0cd0c9c4f4399142c8d780d23d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660425008807863680, guid: 7bf7eb0cd0c9c4f4399142c8d780d23d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660425008807863687, guid: 7bf7eb0cd0c9c4f4399142c8d780d23d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 1660425008838206100, guid: 7bf7eb0cd0c9c4f4399142c8d780d23d,
         type: 3}
       propertyPath: m_RootOrder
