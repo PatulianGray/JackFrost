@@ -18,7 +18,7 @@ public class RBController : MonoBehaviour
     private float hInput;
     private float jumpBufferCount;
 
-    [SerializeField] [Range(-1, 1)] private float scaleFactor = 0.1f;
+    [Range(-1, 1)] public float scaleFactor = 0.1f;
     [SerializeField] [Range(0, 10)] private float scaleSpeed = 0.2f;
     [SerializeField] [Range(0, 10)] private float scaleAmount = 0.2f;
 
@@ -59,6 +59,9 @@ public class RBController : MonoBehaviour
     public bool canDash;
     public bool wasOnGround;
 
+    private const float doubleClickTime = 0.3f;
+    private float lastClickTime;
+
     public MeshRenderer mesh;
     public Color fatige;
 
@@ -76,7 +79,20 @@ public class RBController : MonoBehaviour
 
     void Update()
     {
+        //Double click to return to original scale
+        if (Input.GetButtonDown("Fire3"))
+        {
+            float timeSiceLastClick = Time.time - lastClickTime;
+            if (timeSiceLastClick <= doubleClickTime)
+            {
+                scaleFactor = 1 * Time.deltaTime * 0.1f;
+            }
+
+            lastClickTime = Time.time;
+        }
+        //Player scale
         animScale.SetFloat("scale", scaleFactor);
+
         if (Input.GetAxis("Mouse X") > 0 && Input.GetButton("Fire3") && scaleFactor < 1)
         {
             scaleFactor += scaleAmount * Time.deltaTime * scaleSpeed;

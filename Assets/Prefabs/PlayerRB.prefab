@@ -843,7 +843,7 @@ Transform:
   m_GameObject: {fileID: 1660425008807863684}
   m_LocalRotation: {x: -0, y: -0.70710677, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7701659255276437852}
   m_RootOrder: 0
@@ -855,7 +855,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660425008807863684}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1660425008807863686
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -915,6 +915,7 @@ GameObject:
   - component: {fileID: 563490530503443862}
   - component: {fileID: 383861075}
   - component: {fileID: 8593288250490119588}
+  - component: {fileID: 6221554052748851909}
   m_Layer: 0
   m_Name: PlayerRB
   m_TagString: Player
@@ -1024,7 +1025,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 5115018909822370971}
+  animScale: {fileID: 6221554052748851909}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -1040,6 +1042,9 @@ MonoBehaviour:
   wallJumpChecks:
   - {fileID: 945068427}
   - {fileID: 393100895}
+  scaleFactor: 0
+  scaleSpeed: 2
+  scaleAmount: 3
   defaultSpeed: 0
   speed: 5
   speedMultiplier: 40
@@ -1324,6 +1329,25 @@ MonoBehaviour:
   minSpeed: 0
   currentSpeed: 0
   speedMultiplier: 40
+--- !u!95 &6221554052748851909
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660425008838206105}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b7e967ee142a1234ba3d9806165fc689, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1660425008906753949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,7 +1624,7 @@ Transform:
   m_GameObject: {fileID: 9143560571335555524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 0.8, z: 2}
   m_Children:
   - {fileID: 1660425008807863680}
   m_Father: {fileID: 1660425008838206100}
