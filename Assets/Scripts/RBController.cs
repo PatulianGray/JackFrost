@@ -5,7 +5,8 @@ using UnityEngine;
 public class RBController : MonoBehaviour
 {
     [HideInInspector] public Rigidbody rb;
-    [HideInInspector] public Animator anim;
+    public Animator anim;
+    public Animator animScale;
 
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask wallLayer;
@@ -16,6 +17,10 @@ public class RBController : MonoBehaviour
 
     private float hInput;
     private float jumpBufferCount;
+
+    [SerializeField] [Range(-1, 1)] private float scaleFactor = 0.1f;
+    [SerializeField] [Range(0, 10)] private float scaleSpeed = 0.2f;
+    [SerializeField] [Range(0, 10)] private float scaleAmount = 0.2f;
 
     [Range(0, 10)] public float defaultSpeed = 5f;
     [SerializeField] private float speed;
@@ -67,11 +72,19 @@ public class RBController : MonoBehaviour
         speed = defaultSpeed;
         jumpForce = minJumpForce;
         rb = GetComponent<Rigidbody>();
-        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
+        animScale.SetFloat("scale", scaleFactor);
+        if (Input.GetAxis("Mouse X") > 0 && Input.GetButton("Fire3") && scaleFactor < 1)
+        {
+            scaleFactor += scaleAmount * Time.deltaTime * scaleSpeed;
+        }
+        if (Input.GetAxis("Mouse X") < 0 && Input.GetButton("Fire3") && scaleFactor >= -1f)
+        {
+            scaleFactor -= scaleAmount * Time.deltaTime * scaleSpeed;
+        }
         //Change speed with mouse scroll wheel
         if (Input.GetAxis("Mouse ScrollWheel") > 0 && defaultSpeed < 10)
         {
